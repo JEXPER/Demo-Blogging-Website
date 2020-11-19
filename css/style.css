@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 :root {
@@ -374,17 +374,16 @@ main .site-content .post-content > .post-title .btn-post {
   font-size: 1rem;
 }
 
-.site-content .sidebar .newsletter{
+.site-content .sidebar .newsletter {
   padding-top: 6rem;
   margin: 0 1rem;
 }
 
-.site-content .sidebar .newsletter .form-element{
+.site-content .sidebar .newsletter .form-element {
   padding-top: 0.5rem 2rem;
-  
 }
 
-.site-content .sidebar .newsletter .input-element{
+.site-content .sidebar .newsletter .input-element {
   width: 80%;
   height: 1.9rem;
   padding-top: 0.3rem 0.5rem;
@@ -392,19 +391,19 @@ main .site-content .post-content > .post-title .btn-post {
   font-size: 1rem;
 }
 
-.site-content .sidebar .newsletter .form-btn{
+.site-content .sidebar .newsletter .form-btn {
   border-radius: 0;
   background: var(--sky);
   margin-top: 1rem;
   padding: 1rem 32%;
 }
 
-.site-content .sidebar .popular-tag{
+.site-content .sidebar .popular-tag {
   padding-top: 6rem;
-  margin: 0 1rem;
+  margin: 3rem 1rem;
 }
 
-.site-content .sidebar .popular-tag .tags .tag{
+.site-content .sidebar .popular-tag .tags .tag {
   padding: 0.4rem 1rem;
   margin: 0.4rem 0.6rem;
   border-radius: 3rem;
@@ -415,36 +414,35 @@ main .site-content .post-content > .post-title .btn-post {
 
 /* -------------------x--------------- Main site -------------------x-------------- */
 
-
 /* ------------- Footer -------------- */
 
-footer.footer{
+footer.footer {
   height: 100%;
   background: var(--bg-color);
   position: relative;
 }
 
-footer.footer .container{
+footer.footer .container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
-footer.footer .container>div{
+footer.footer .container > div {
   flex-basis: 0;
   flex-grow: 1;
-  padding: 0.3rem 0.9rem;
+  padding: 3rem 0.9rem;
 }
 
-footer.footer .container h2{
+footer.footer .container h2 {
   color: white;
 }
 
-footer.footer .newsletter .form-element{
+footer.footer .newsletter .form-element {
   background: black;
   display: inline-block;
 }
 
-footer.footer .newsletter .form-element input{
+footer.footer .newsletter .form-element input {
   padding: 0.5rem 0.7rem;
   border: none;
   background: transparent;
@@ -454,40 +452,40 @@ footer.footer .newsletter .form-element input{
   width: 74%;
 }
 
-footer.footer .newsletter .form-element span{
+footer.footer .newsletter .form-element span {
   background: var(--sky);
   padding: 0.5rem 0.7rem;
   cursor: pointer;
 }
 
-footer.footer .instagram div>img{
+footer.footer .instagram div > img {
   display: inline-block;
   width: 25%;
   height: 50%;
   margin: 0.3rem 0.4rem;
 }
 
-footer.footer .follow-us div i{
+footer.footer .follow-us div i {
   color: white;
   padding: 0 0.4rem;
 }
 
-footer.footer .rights{
+footer.footer .rights {
   justify-content: center;
   font-family: var(--Josefin);
 }
 
-footer.footer .move-up{
+footer.footer .move-up {
   position: absolute;
   right: 6%;
   top: 50%;
 }
 
-footer.footer .move-up span{
+footer.footer .move-up span {
   color: var(--midnight);
 }
 
-footer.footer .move-up span:hover{
+footer.footer .move-up span:hover {
   color: white;
   cursor: pointer;
 }
@@ -495,7 +493,23 @@ footer.footer .move-up span:hover{
 /* ------x------- Footer ------x-------- */
 
 /* ------------- Media Query -------------- */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1130px) {
+  .site-content .post-content > .post-image .post-info {
+    left: 2rem !important;
+    bottom: 1.2rem !important;
+    border-radius: 0 !important;
+  }
+
+  footer.footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-content .sidebar .popular-post .post-info {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
   .nav .hamburger {
     display: block;
   }
@@ -506,6 +520,28 @@ footer.footer .move-up span:hover{
 
   .nav .nav-items {
     display: none;
+  }
+
+  main .site-content {
+    grid-template-columns: 100%;
+  }
+
+  footer.footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  main .blog {
+    height: 125vh;
+  }
+
+  .site-content .post-content > .post-image .post-info {
+    display: none;
+  }
+
+  footer.footer .container > div {
+    padding: 1rem 0.9rem !important;
   }
 }
 /* ------x------- Media Query -------x------- */
